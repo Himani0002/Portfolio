@@ -8,7 +8,7 @@ Welcome to my portfolio! This project showcases my skills, experience, and the p
 
 ## 🌟 Live Demo
 
-Check out the live version of my portfolio here: [Live Demo](#)
+Check out the live version of my portfolio here: [Live Demo](https://66bdfc52d3aa1b2b3f6de91c--coruscating-starship-844ef3.netlify.app/)
 
 ## 📝 Description
 
