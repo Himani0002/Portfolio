@@ -8,7 +8,7 @@ Welcome to my portfolio! This project showcases my skills, experience, and the p
 
 ## 🌟 Live Demo
 
-Check out the live version of my portfolio here: [Live Demo](https://66bdfc52d3aa1b2b3f6de91c--coruscating-starship-844ef3.netlify.app/)
+Check out the live version of my portfolio here: [Live Demo](#)
 
 ## 📝 Description
 
@@ -42,7 +42,7 @@ This portfolio is designed to present my professional journey as a Full Stack De
 
 ### 3. **Netflix HTML & CSS Clone**
    - **Description:** A simplified clone of the Netflix streaming service.
-   - **Link:** [View Project](https://66bdfc1003377a250ff25dc2--melodious-gnome-f56f0c.netlify.app](https://66be04e2fb8e5a2e8fd20c7c--symphonious-profiterole-251f61.netlify.app)
+   - **Link:** [View Project](https://66bdfc1003377a250ff25dc2--melodious-gnome-f56f0c.netlify.app/)
 
 ## 📬 Contact
 
