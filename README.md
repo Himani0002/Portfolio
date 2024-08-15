@@ -42,7 +42,7 @@ This portfolio is designed to present my professional journey as a Full Stack De
 
 ### 3. **Netflix HTML & CSS Clone**
    - **Description:** A simplified clone of the Netflix streaming service.
-   - **Link:** [View Project]([https://66bdfc1003377a250ff25dc2--melodious-gnome-f56f0c.netlify.app](https://66be04e2fb8e5a2e8fd20c7c--symphonious-profiterole-251f61.netlify.app/)/)
+   - **Link:** [View Project](https://66bdfc1003377a250ff25dc2--melodious-gnome-f56f0c.netlify.app](https://66be04e2fb8e5a2e8fd20c7c--symphonious-profiterole-251f61.netlify.app)
 
 ## 📬 Contact
 
