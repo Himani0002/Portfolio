@@ -1,289 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-
-  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 
-<body>
-  <header class="header">
-    <a href="index.html" class="logo">Portfolio</a>
-    <nav class="navbar">
-      <a href="index.html" style="--i:1">Home</a>
-      <a href="#about" style="--i:2">About</a>
-      <a href="#Skills" style="--i:3">Skills</a>
-      <a href="#project" style="--i:4">Project</a>
-      <a href="#contact" style="--i:5">Contact</a>
-    </nav>
-  </header>
+<body class="overflow-x-hidden">
 
-  <section class="home">
-    <div class="home-content">
-      <h3>Hello, It's Me</h3>
-      <h1>Himani Gohil</h1>
-      <h3>And I'm a <span class="text"></span></h3>
-      <p>In the world of software, the best way to predict the future is to invent it.
-        Code is like humor.</p>
+  <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+    <img src="./images/header-bg-color.png" alt="" class="w-full ">
+  </div>
+  <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
 
-      <div class="home-sci">
-        <a href="https://www.linkedin.com/in/himani-gohil/" style="--i:6"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/Himani0002" style="--i:7"><i class='bx bxl-github'></i></a>
-        <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
-      </div>
-      <a href="#about" class="btn-box">More About Me</a>
+
+    <!-- Text Logo -->
+
+    <!-- Text Logo -->
+    <div class="text-3xl font-bold text-gray-700">
+      Himani<span class="text-5xl text-purple-400">.</span>
     </div>
 
-    <span class="home-imgHover"></span>
-  </section>
 
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="https://cdn.dribbble.com/users/219482/screenshots/14676444/media/28fa0b64b0454de0d0664e364e4f95fc.gif"
+    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">My Work</a></li>
+      <li><a href="#contact">Contact me</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4 ">
+
+      <button><img src="./images/moon_icon.png" class="w-6" alt=""></button>
+      <a href="#contact"
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">Contact
+        <img src="./images/arrow-icon.png" class="w-3" alt=""></a>
+
+      <button class="block md:hidden ml-3 w-7" onclick="openMenu()">
+        <img src="./images/menu-black.png" alt="">
+      </button>
+    </div>
+
+    <!-- mobile menu -->
+    <ul id="sideMenu"
+      class="flex md:hidden flex-col py-20 px-10 fixed  gap-4 -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
+
+      <div class="absolute right-6 top-6" onclick="closeMenu()">
+        <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer">
+      </div>
+      <li><a href="#top" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About me</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+    </ul>
+  </nav>
+
+  <div
+    class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center rounded-full justify-center gap-4">
+
+    <img src="./images/My.jpg" alt="" class="rounded-full w-32 h-32 object-cover">
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">Hello, It's Me <img src="./images/hand-icon.png" alt=""
+        class="w-6"></h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Himani Gohil
+      And I'm a Web Developer !</h1>
+    <p class="max-w-2xl mx-auto">In the world of software, the best way to predict the future is to invent it. Code is
+      like humor.
+    </p>
+
+    <div class="flex flex-col sm:flex-row  items-center gap-4 mt-4 ">
+      <a href="#contact"
+        class="px-10 py-4 border rounded-full bg-gradient-to-t from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2">Contact
+        me <img src="images/right-arrow-white.png" class="w-4" alt=""></a>
+
+      <!-- Resume PDF -->
+      <a href="Himani_Gohil.pdf" download
+        class="px-10 py-4 border rounded-full bg-gradient-to-t bg-white border-gray-500 flex items-center gap-2">my
+        resume
+        me <img src="images/download-icon.png" class="w-4" alt=""></a>
+    </div>
+  </div>
+
+  <!-- about me  -->
+
+  <div id="about" class="w-full px-[12%] py-10 scroll-m-20">
+    <h4 class="text-center mb-2 text-lg">Introduction</h4>
+    <h2 class="text-center text-5xl">About me</h2>
+
+  </div>
+  <div class="flex w-full flex-col px-[12%] lg:flex-row items-center gap-20 my-20">
+    <div class="max-w-max mx-auto relative"><img src="images/My.jpg" class="w-64 sm:w-80 rounded-3xl max-w-none "
         alt="">
-    </div>
-    <div class="about-text">
-      <h2>About<span> Me</span></h2>
-      <h4>Full Stack Developer !</h4>
-      <p>I hold a Bachelor's degree in Computer Application from R.N.T.U.
+      <div
+        class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0px_4px_55px_rgba(0,0,0,0.5)] flex items-center justify-center">
+        <img src="./images//circular-text.png" class="w-full" alt="">
+        <img src="./images/dev-icon.png" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 
-        I harbor a profound inclination towards software development and have adeptly executed projects encompassing
-        both
-        Frontend Technologies (HTML, CSS, JavaScript) and Backend Technologies (PHP, MySQL), culminating in the
-        successful completion of two projects.
-
-        Coding and indulging in musical pursuits serve as my cherished pastimes.
-
-        Describe me succinctly in one word: Rational and Adaptable.
-
-        My aspiration is to delve into a stimulating career path in software engineering, where I can harness my honed
-        skills to attain exemplary outcomes.
-
-        Coding embodies more than mere fervor for me; it represents a conduit for translating abstract concepts into
-        tangible innovations, echoing my conviction in the transformative potential of technology.</p>
-      <a href="#" class="btn-box">More About Me</a>
-    </div>
-
-  </section>
-
-  <section>
-    <div class="services" id="services">
-      <div class="container">
-        <h1 class="sub-title">My<span> Services</span></h1>
-        <div class="services-list">
-          <div>
-            <i class='bx bx-code bx-flip-horizontal' style="color:#18EFA8"></i>
-            <h2>Frontend Development</h2>A front-end developer creates websites and applications using web languages
-            such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app. When you
-            visit a website, the design elements you see were created by a front-end developer.</p>
-            <a href="#" class="read">More</a>
-          </div>
-          <div>
-            <i class='bx bx-code bx-flip-horizontal' style="color:#18EFA8"></i>
-            <h2>Backend Development</h2>
-            <p>What is back-end development? Back-end development means working on server-side software, which focuses
-              on everything you can't see on a website. Back-end developers ensure the website performs correctly,
-              focusing on databases, back-end logic, application programming interface (APIs), architecture, and
-              servers.</p>
-            <a href="#" class="read">More</a>
-          </div>
-          <div>
-            <i class='bx bx-code bx-flip-horizontal' style="color:#18EFA8"></i>
-            <h2>Full Stack Development</h2>
-            <p>
-              Full stack developers have a comprehensive understanding of the entire web application, from the front end
-              to the back end. This holistic knowledge allows them to take complete ownership of the project, making
-              informed decisions and ensuring a cohesive development process.</p>
-            <a href="#" class="read">More</a>
-          </div>
-
-        </div>
       </div>
     </div>
 
+    <div class="flex-1">
+      <p class="mb-10 max-w-2xl">I am a passionate and skilled Full Stack Developer, specializing in the MERN stack
+        (MongoDB,
+        Express.js,
+        React.js, Node.js). I hold a Bachelor's degree in Computer Application from R.N.T.U., graduating with a CGPA of
+        8. With a deep interest in software development, I have successfully completed multiple projects, demonstrating
+        proficiency in Frontend Technologies like HTML, CSS, JavaScript, as well as Backend Technologies such as
+        MongoDB.</p>
 
-    <h1 class="sub-title">My <span>Skills</span></h1>
-    <section class="section">
-      <div class="container1" id="Skills">
-        <h1 class="heading1">Technical Skills</h1>
-        <div class="Technical-bars">
-          <div class="bar">
-            <div class="info">
-              <i class='bx bxl-html5' style='color:#c95d2e'></i>
-              <span>HTML</span>
-            </div>
-            <div class="progress-line html">
-              <span data-value="90%"></span>
-            </div>
+      <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
+        <li
+          class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+          <img src="./images/code-icon.png" class="w-7 mt-3">
+          <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+          <p class="text-gray-600 text-sm">Html, Css, JavaScript, React JS, Next Js</p>
+        </li>
+        <li
+          class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+          <img src="./images/edu-icon.png" class="w-7 mt-3">
+          <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+          <p class="text-gray-600 text-sm">BCA in Computer Science</p>
+        </li>
+        <li
+          class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+          <img src="./images/project-icon.png" class="w-7 mt-3">
+          <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+          <p class="text-gray-600 text-sm">Built more than 3 project</p>
+        </li>
+      </ul>
+      <h4 class="my-6 text-gray-700">Tools I use</h4>
+      <ul class="flex items-center gap-3 sm:gap-5">
+        <li
+          class="flex items-center justify-center w-12 sm:w-14  aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src="./images/vscode.png" class="w-5 sm:w-7" alt="">
+        </li>
+        <li
+          class="flex items-center justify-center w-12 sm:w-14  aspect-square border   border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src="./images/firebase.png" class="w-5 sm:w-7" alt="">
+        </li>
+        <li
+          class="flex items-center justify-center w-12 sm:w-14  aspect-square border  border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src="./images/mongodb.png" class="w-5 sm:w-7" alt="">
+        </li>
+        <li
+          class="flex items-center justify-center w-12 sm:w-14  aspect-square border  border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src="./images/git.png" class="w-5 sm:w-7" alt="">
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+  <!--  services -->
+  <div id="services" class="w-full px-4 md:px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-base md:text-lg">What I Offer</h4>
+    <h2 class="text-center text-3xl md:text-5xl">My Services</h2>
+    <p class="text-center max-w-lg mx-auto mt-5 mb-12 text-sm md:text-base">MongoDB, Express.js, React.js, Node.js</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
+      <!-- Full Stack Development -->
+      <div class="border border-gray-400 rounded-lg px-6 py-8 md:px-8 md:py-12 
+        hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/web-icon.png" class="w-8 md:w-10" alt="">
+        <h3 class="text-base md:text-lg my-6 md:my-8 text-gray-700">Full Stack Development</h3>
+        <p class="text-xs md:text-sm text-gray-800 leading-5">Web development is the process of building, programming...
+        </p>
+        <a href="" class="flex items-center gap-2 text-xs md:text-sm mt-5">Read more
+          <img src="./images/right-arrow.png" alt="" class="w-3 md:w-4">
+        </a>
+      </div>
+
+      <!-- Frontend Development -->
+      <div class="border border-gray-400 rounded-lg px-6 py-8 md:px-8 md:py-12 
+        hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/web-icon.png" class="w-8 md:w-10" alt="">
+        <h3 class="text-base md:text-lg my-6 md:my-8 text-gray-700">Frontend Development</h3>
+        <p class="text-xs md:text-sm text-gray-800 leading-5">Web development is the process of building, programming...
+        </p>
+        <a href="" class="flex items-center gap-2 text-xs md:text-sm mt-5">Read more
+          <img src="./images/right-arrow.png" alt="" class="w-3 md:w-4">
+        </a>
+      </div>
+
+      <!-- Backend Development -->
+      <div class="border border-gray-400 rounded-lg px-6 py-8 md:px-8 md:py-12 
+        hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/web-icon.png" class="w-8 md:w-10" alt="">
+        <h3 class="text-base md:text-lg my-6 md:my-8 text-gray-700">Backend Development</h3>
+        <p class="text-xs md:text-sm text-gray-800 leading-5">Web development is the process of building, programming...
+        </p>
+        <a href="" class="flex items-center gap-2 text-xs md:text-sm mt-5">Read more
+          <img src="./images/right-arrow.png" alt="" class="w-3 md:w-4">
+        </a>
+      </div>
+
+      <!-- Web Development -->
+      <div class="border border-gray-400 rounded-lg px-6 py-8 md:px-8 md:py-12 
+        hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/web-icon.png" class="w-8 md:w-10" alt="">
+        <h3 class="text-base md:text-lg my-6 md:my-8 text-gray-700">Web Development</h3>
+        <p class="text-xs md:text-sm text-gray-800 leading-5">Web development is the process of building, programming...
+        </p>
+        <a href="" class="flex items-center gap-2 text-xs md:text-sm mt-5">Read more
+          <img src="./images/right-arrow.png" alt="" class="w-3 md:w-4">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- my work -->
+  <div>
+    <div id="work" class="w-full px-4 md:px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-base md:text-lg">My portfolio</h4>
+      <h2 class="text-center text-3xl md:text-5xl">My latest work</h2>
+      <p class="text-center max-w-lg mx-auto mt-5 mb-12 text-sm md:text-base">Welcome to my web development portfolio!
+        Explore a collection of projects showcasing my expertise in front-end development.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
+      <!-- Work 1 -->
+      <div
+        class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+        <div
+          class="bg-white w-11/12 md:w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-4 md:px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+          <div>
+
+            <h2 class="font-semibold text-sm md:text-base">GitHub Clone</h2>
+            <p class="text-xs md:text-sm text-gray-700">Full Stack </p>
           </div>
-          <div class="bar">
-            <div class="info">
-              <i class='bx bxl-css3' style='color:#147bbc'></i>
-              <span>CSS</span>
-            </div>
-            <div class="progress-line css">
-              <span data-value="60%"></span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <i class='bx bxl-javascript' style='color:#b0bc1e'></i>
-              <span>JavaScript</span>
-            </div>
-            <div class="progress-line javascript">
-              <span data-value="80%"></span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <i class='bx bxl-python' style='color:#c32ec9'></i>
-              <span>Python</span>
-            </div>
-            <div class="progress-line python">
-              <span data-value="70%"></span>
-            </div>
+          <div
+            class="border rounded-full border-black w-7 md:w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+
+            <a href="https://github.com/Himani0002/Github-Clone.git">
+              <img src="./images/send-icon.png" class="w-4 md:w-5" alt="">
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="container1">
-        <h1 class="heading1">Professional Skills</h1>
-        <div class="radial-bars">
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-1" cx="100" cy="100" r="80" style="--progress: 0.8;"></circle>
-            </svg>
-            <div class="percentage">80%</div>
-            <div class="text">Creativity</div>
+      <!-- Work 2 -->
+      <div
+        class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+        <div
+          class="bg-white w-11/12 md:w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-4 md:px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+          <div>
+            <h2 class="font-semibold text-sm md:text-base">ChatGPT Clone</h2>
+            <p class="text-xs md:text-sm text-gray-700">Full Stack</p>
           </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-2" cx="100" cy="100" r="80" style="--progress: 0.7;"></circle>
-            </svg>
-            <div class="percentage">70%</div>
-            <div class="text">Communication</div>
-          </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-3" cx="100" cy="100" r="80" style="--progress: 0.87;"></circle>
-            </svg>
-            <div class="percentage">87%</div>
-            <div class="text">Problem Solving</div>
-          </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-4" cx="100" cy="100" r="80" style="--progress: 0.73;"></circle>
-            </svg>
-            <div class="percentage">73%</div>
-            <div class="text">Teamwork</div>
-          </div>
-        </div>
-
-      </div>
-      <div class="portfolio" id="project">
-        <div class="main-text">
-          <h2>Latest <span>Project</span></h2>
-          <div class="portfolio-content">
-            <div class="row">
-              <img
-                src="https://camo.githubusercontent.com/f02a84ab264a08bf952ac44fb0e857f85e27bbfeb0e51ddbb87c512603cd18c4/68747470733a2f2f6d656469612e6765656b73666f726765656b732e6f72672f77702d636f6e74656e742f75706c6f6164732f32303234303332363136323933352f507265766965772e6a7067"
-                alt="Project Image 1">
-              <div class="layer">
-                <h3>Amazon</h3>
-                <p>
-                  Welcome to the Amazon HTML and CSS Clone project! This project is a simplified version of the popular
-                  e-commerce website, Amazon. Enjoy exploring and customizing it!</p>
-                <a href="https://66bdfbbb03377a250ff25c49--strong-pixie-b4d00e.netlify.app/"><i
-                    class='bx bx-link-external' style="color:rgb(0, 0, 0)"></i></a>
-              </div>
-            </div>
-            <div class="row">
-              <img src="https://m.media-amazon.com/images/I/71UGFF-EzFL._AC_SY355_.jpg" alt="Project Image 2">
-              <div class="layer">
-                <h3>Alexa Voice Assistant Clone</h3>
-                <p>Welcome to the Alexa Voice Assistant Clone project! This project is a simplified version of a voice
-                  assistant that can perform various tasks such as playing music, telling the time, providing Wikipedia
-                  summaries, and telling jokes. Enjoy exploring and customizing it!</p>
-                <a href="https://github.com/Himani0002/Alexa.git"><i class='bx bx-link-external'
-                    style="color:rgb(0, 0, 0)"></i></a>
-              </div>
-            </div>
-            <div class="row">
-              <img src="https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png"
-                alt="Project Image 3">
-              <div class="layer">
-                <h3>Netflix</h3>
-                <p>Welcome to the Netflix HTML and CSS Clone project! This project is a simplified version of the
-                  popular streaming service, Netflix. Enjoy exploring and customizing it! </p>
-                <a href="https://66bdfc1003377a250ff25dc2--melodious-gnome-f56f0c.netlify.app/"><i
-                    class='bx bx-link-external' style="color:rgb(0, 0, 0)"></i></a>
-              </div>
-            </div>
+          <div
+            class="border rounded-full border-black w-7 md:w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+            <a href="https://github.com/Himani0002/ChatGPT-Clone.git">
+              <img src="./images/send-icon.png" class="w-4 md:w-5" alt="">
+            </a>
           </div>
         </div>
       </div>
 
-      <center>
-        <section class="contact" id="contact">
-          <div class="contact-content">
-            <div class="contact-text">
-              <h2>Contact <span>Me</span></h2>
-              <h4>Let's Work Together</h4>
-
-              <div class="contact-form">
-                <form action="">
-                  <input type="text" placeholder="Name" required>
-                  <input type="email" placeholder="Email" required>
-                  <input type="text" placeholder="Enter your subject" required>
-                  <textarea name="message" id="message" placeholder="Enter your Message" required></textarea>
-                  <input type="submit" value="Submit" class="send">
-                </form>
-              </div>
-              <ul class="contact-list">
-                <li>
-                  <i class='bx bxs-send'></i>
-                  himanigohil0002@gmail.com
-                </li>
-                <li>
-                  <i class='bx bxs-phone'></i>
-                  8347412919
-                </li>
-              </ul>
-              <div class="contact-icons">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="https://github.com/Himani0002"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/himani-gohil/"><i class='bx bxl-linkedin'></i></a>
-              </div>
-            </div>
+      <!-- Work 3 -->
+      <div
+        class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+        <div
+          class="bg-white w-11/12 md:w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-4 md:px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+          <div>
+            <h2 class="font-semibold text-sm md:text-base"> Alexa Voice Assistant Clone</h2>
+            <p class="text-xs md:text-sm text-gray-700">Ml Project</p>
           </div>
-        </section>
-      </center>
+          <div
+            class="border rounded-full border-black w-7 md:w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+            <a href="https://github.com/Himani0002/Alexa.git">
+              <img src="./images/send-icon.png" class="w-4 md:w-5" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Work 4 -->
+      <div
+        class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+        <div
+          class="bg-white w-11/12 md:w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-4 md:px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+          <div>
+            <h2 class="font-semibold text-sm md:text-base">Animated Website</h2>
+            <p class="text-xs md:text-sm text-gray-700">Web Design</p>
+          </div>
+          <div
+            class="border rounded-full border-black w-7 md:w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+            <a href="https://github.com/Himani0002/Animated-Website.git">
+              <img src="./images/send-icon.png" class="w-4 md:w-5" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
 
-</body>
+    </div>
+  </div>
 
-</html>
+  <!-- contact -->
+  <div id="contact"
+    class="w-full px-4 md:px-[12%] mt-20 py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]">
+    <h4 class="text-center mb-2 text-base md:text-lg mt-52">Connect with me</h4>
+    <h2 class="text-center text-3xl md:text-5xl">Get in Touch</h2>
+    <p class="text-center max-w-lg mx-auto mt-5 mb-12 text-sm md:text-base">I'd love to hear from you! If you have any
+      questions, comments or feedback, please use the form below.</p>
 
-</html>
+    <form action="" class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-10 mb-8">
+        <input type="text" placeholder="Enter your name"
+          class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
 
-<script src="main.js"></script>
+        <input type="email" placeholder="Enter your email"
+          class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
+      </div>
 
+      <textarea rows="6" placeholder="Enter your message"
+        class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"></textarea>
+
+      <button
+        class="py-3 px-8 mt-10 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500">
+        Submit now
+        <img src="./images/right-arrow-white.png" class="w-4" alt="">
+      </button>
+    </form>
+  </div>
+
+  <!-- --Footer-- -->
+  <div class="mt-20">
+    <div class="text-center">
+      <div class="mx-auto mb-2 text-2xl sm:text-3xl font-bold text-gray-700">
+        Himani<span class="text-4xl sm:text-5xl text-purple-400">.</span>
+      </div>
+      <div class="w-max flex items-center gap-2 mx-auto">
+        <img src="./images/mail_icon.png" class="w-5 sm:w-6">
+        <span class="text-sm sm:text-base">himanigohil0002@gmail.com</span>
+      </div>
+    </div>
+
+    <div
+      class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-4 sm:mx-[10%] my-8 sm:my-12 py-6">
+      <p class="text-sm sm:text-base">© 2024 Himani Gohil. All Rights reserved.</p>
+      <ul class="flex items-center justify-center gap-6 sm:gap-10 mt-6 sm:mt-0">
+        <li><a href="https://github.com/Himani0002" class="text-sm sm:text-base">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/himani-gohil/" class="text-sm sm:text-base">LinkedIn</a></li>
+        <li><a href="#" class="text-sm sm:text-base">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
